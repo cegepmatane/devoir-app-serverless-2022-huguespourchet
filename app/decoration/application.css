@@ -1,0 +1,172 @@
+﻿@import "normalize.css" ;
+
+@font-face {
+  font-family: 'Cream Cake';
+  src: url('font/cream_cake/Cream Cake.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Hello Christmas Icon';
+  src: url('font/hello_christmas_icons/Hello-Christmas-Icon-trial.ttf')  format('truetype');
+}
+
+:root {
+  --theme-rouge: #fd341f;
+  --theme-blanc-transparent: rgba(255,255,255,0.3);
+  --theme-bleu-pale: rgba(151,219,246,1);
+  --theme-bleu-fonce: rgba(63,155,191,1);
+  --theme-vert: #408450;
+  --theme-blanc: white;
+  --theme-noir: black;
+
+  --theme-bordure-rondeur: 0.5rem;
+}
+
+html {
+  font-family:'Cream Cake', sans-serif;
+  font-size:48px;
+}
+
+#liste-cadeau {
+  list-style-type:none;
+}
+
+.liste-cadeau-item {
+  color:var(--theme-rouge);
+  text-transform : capitalize;
+  text-decoration:none;
+}
+
+#liste-cadeau li {
+  position:relative;
+  display:block;
+  margin-bottom:0.25rem;
+  background-color:var(--theme-blanc-transparent);
+  border-radius:var(--theme-bordure-rondeur);
+  padding:0.25rem;
+  padding-left:1.50rem;
+  box-shadow: 2px 2px var(--theme-blanc);
+}
+
+#liste-cadeau li::before {
+   content:"G";
+   text-align:center;
+   color:var(--theme-rouge);
+   font-size:1.25rem;
+   position:absolute;
+   top:0.1rem;
+   left:0.25rem;
+   height:1rem;
+   width:1rem;
+
+   font-family:'Hello Christmas Icon', sans-serif;
+
+
+}
+
+fieldset {
+  color:var(--theme-rouge);
+  border-color: var(--theme-rouge);
+  border-radius:var(--theme-bordure-rondeur);
+}
+
+input[type="text"],
+textarea {
+  display:block;
+  width:100%;
+  border:none;
+  background-color:var(--theme-blanc-transparent);
+  border-radius:var(--theme-bordure-rondeur);
+}
+
+#page-chargement-application{
+  position:relative;
+  height:100vh;
+  background-image:url(illustration/vanilla-js.png);
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:bottom center;
+  background-attachment:fixed;
+
+  text-align:center;
+  font-size:2rem;
+  font-weight:normal;
+  line-height:1.8rem;
+
+  padding:10%;
+  color:var(--theme-blanc);
+  text-shadow: 2px 2px var(--theme-noir);
+  animation: pulse 1.5s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes pulse {
+  0% {
+    background-color:var(--theme-bleu-fonce);
+  }
+  100% {
+    background-color:var(--theme-bleu-pale);
+  }
+}
+
+
+
+.page {
+  position:relative;
+  background-color:var(--theme-bleu-pale);
+  padding:5%;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  background-image:url(illustration/personne-cadeau.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:right bottom;
+  background-attachment:fixed;
+  background-size: 40%;
+  color:var(--theme-rouge);
+}
+
+
+.page h1{
+  text-align:center;
+  font-size:2rem;
+  font-weight:normal;
+  line-height:1.8rem;
+  color:var(--theme-vert);
+  text-shadow: 2px 2px var(--theme-blanc);
+
+}
+
+.page h2,
+.page p {
+  background-color:var(--theme-blanc-transparent);
+  border:0px transparent solid;
+  border-radius:var(--theme-bordure-rondeur);
+  padding:0.25rem;
+}
+
+
+.action{
+  position:relative;
+  display:block;
+  text-decoration: none;
+  font-family:sans-serif;
+  background-color:#fd9f44;
+  color:var(--theme-blanc);
+  border:0px transparent solid;
+  border-radius:var(--theme-bordure-rondeur);
+  padding:0.25rem;
+  font-size:1rem;
+  text-align:center;
+  width:50%;
+  margin:0 auto;
+  box-sizing: border-box;
+  margin-top:0.25rem;
+  margin-bottom:0.25rem;
+  box-shadow: 2px 2px var(--theme-blanc);
+}
+
+.action:active {
+  border:0px transparent solid;
+}
