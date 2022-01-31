@@ -5,13 +5,13 @@ header("Access-Control-Allow-Headers: X-Requested-With");
 header('Content-Type: application/json; charset=utf-8');
 
 $id = $_GET["id"];
-$listeCadeauJson = file_get_contents("liste-cadeau.json");
+$listePoutineJson = file_get_contents("liste-poutine.json");
 
-if(strlen($listeCadeauJson) > 0){
-  $listeCadeau = json_decode($listeCadeauJson);
-  foreach($listeCadeau as $cadeau) {
-      if ($id == $cadeau->id) {
-          echo json_encode($cadeau);
+if(strlen($listePoutineJson) > 0){
+  $listePoutine = json_decode($listePoutineJson);
+  foreach($listePoutine as $poutine) {
+      if ($id == $poutine->id) {
+          echo json_encode($poutine);
           die();
       }
   }

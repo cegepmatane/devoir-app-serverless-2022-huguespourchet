@@ -1,17 +1,17 @@
 ﻿class Application {
-  constructor(window, vueListeCadeau, vueCadeau, vueAjouterCadeau, cadeauDAO){
+  constructor(window, vueListePoutine, vuePoutine, vueAjouterPoutine, poutineDAO){
 
     this.window = window;
 
-    this.vueListeCadeau = vueListeCadeau;
+    this.vueListePoutine = vueListePoutine;
 
-    this.vueCadeau = vueCadeau;
+    this.vuePoutine = vuePoutine;
 
-    this.vueAjouterCadeau = vueAjouterCadeau;
-    // C'est l'équivalent de function(cadeau){this.ajouterCadeau(cadeau)}
-    this.vueAjouterCadeau.initialiserAjouterCadeau(cadeau =>this.ajouterCadeau(cadeau));
+    this.vueAjouterPoutine = vueAjouterPoutine;
+    // C'est l'équivalent de function(poutine){this.ajouterPoutine(poutine)}
+    this.vueAjouterPoutine.initialiserAjouterPoutine(poutine =>this.ajouterPoutine(poutine));
 
-    this.cadeauDAO = cadeauDAO;
+    this.poutineDAO = poutineDAO;
 
     // C'est l'équivalent de function(){this.naviguer()}
     this.window.addEventListener("hashchange", () =>this.naviguer());
@@ -24,42 +24,42 @@
 
     if(!hash){
 
-      this.cadeauDAO.lister((listeCadeau) => this.afficherNouvelleListeCadeau(listeCadeau));
+      this.poutineDAO.lister((listePoutine) => this.afficherNouvelleListePoutine(listePoutine));
 
-    }else if(hash.match(/^#ajouter-cadeau/)){
+    }else if(hash.match(/^#ajouter-poutine/)){
 
-      this.vueAjouterCadeau.afficher();
+      this.vueAjouterPoutine.afficher();
 
     }else{
 
-      let navigation = hash.match(/^#cadeau\/([0-9]+)/);
-      let idCadeau = navigation[1];
+      let navigation = hash.match(/^#poutine\/([0-9]+)/);
+      let idPoutine = navigation[1];
 
-      this.cadeauDAO.chercher(idCadeau, (cadeau) => this.afficherNouveauCadeau(cadeau));
+      this.poutineDAO.chercher(idPoutine, (poutine) => this.afficherNouveauPoutine(poutine));
     }
   }
 
-  afficherNouvelleListeCadeau(listeCadeau){
+  afficherNouvelleListePoutine(listePoutine){
 
-    console.log(listeCadeau);
-    this.vueListeCadeau.initialiserListeCadeau(listeCadeau);
-    this.vueListeCadeau.afficher();
+    console.log(listePoutine);
+    this.vueListePoutine.initialiserListePoutine(listePoutine);
+    this.vueListePoutine.afficher();
   }
 
-  afficherNouveauCadeau(cadeau){
-    console.log(cadeau);
-    this.vueCadeau.initialiserCadeau(cadeau);
-    this.vueCadeau.afficher();
+  afficherNouveauPoutine(poutine){
+    console.log(poutine);
+    this.vuePoutine.initialiserPoutine(poutine);
+    this.vuePoutine.afficher();
   }
 
-  ajouterCadeau(cadeau){
-    this.cadeauDAO.ajouter(cadeau, () => this.afficherListeCadeau());
+  ajouterPoutine(poutine){
+    this.poutineDAO.ajouter(poutine, () => this.afficherListePoutine());
   }
 
-  afficherListeCadeau(){
+  afficherListePoutine(){
     this.window.location.hash = "#";
   }
 }
 
-new Application(window, new VueListeCadeau(), new VueCadeau(), new VueAjouterCadeau(), new CadeauDAO());
+new Application(window, new VueListePoutine(), new VuePoutine(), new VueAjouterPoutine(), new PoutineDAO());
 

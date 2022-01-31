@@ -4,11 +4,11 @@ header('Access-Control-Allow-Methods: GET, POST');
 header("Access-Control-Allow-Headers: X-Requested-With");
 header('Content-Type: application/json; charset=utf-8');
 
-$listeCadeauJson = file_get_contents("liste-cadeau.json");
+$listePoutineJson = file_get_contents("liste-poutine.json");
 
-if(strlen($listeCadeauJson) > 0){
-  $listeCadeau = json_decode($listeCadeauJson);
-  echo json_encode($listeCadeau);
+if(strlen($listePoutineJson) > 0){
+  $listePoutine = json_decode($listePoutineJson);
+  echo json_encode($listePoutine);
 }else{
   echo json_encode([]);
 }

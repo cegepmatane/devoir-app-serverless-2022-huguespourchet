@@ -1,14 +1,14 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-  <title>Liste de cadeaux</title>
+  <title>Liste de poutines</title>
   <link rel="stylesheet" href="decoration/application.css">
   <style></style>
-  <script src="Cadeau.js"></script>
-  <script src="CadeauDAO.js"></script>
-  <script src="VueCadeau.js"></script>
-  <script src="VueListeCadeau.js"></script>
-  <script src="VueAjouterCadeau.js"></script>
+  <script src="Poutine.js"></script>
+  <script src="PoutineDAO.js"></script>
+  <script src="VuePoutine.js"></script>
+  <script src="VueListePoutine.js"></script>
+  <script src="VueAjouterPoutine.js"></script>
   <!--
   https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies
   Scripts loaded using the defer attribute will run in the order they appear
@@ -18,51 +18,51 @@
 
 </head>
 <body>
-  <div id="page-chargement-application">Chargement de l'application liste de cadeaux</div>
+  <div id="page-chargement-application">Chargement de l'application liste de poutines</div>
 
 
-  <script type="plain/text" id="html-vue-liste-cadeau">
+  <script type="plain/text" id="html-vue-liste-poutine">
   <div class="page">
-    <h1>Liste de cadeaux</h1>
-    <a class="action" href="#ajouter-cadeau">Ajouter un cadeau</a>
-    <ul id="liste-cadeau">
-      <li><a href="#cadeau/{Cadeau.id}" class="liste-cadeau-item">{Cadeau.nom}</a></li>
+    <h1>Liste de poutines</h1>
+    <a class="action" href="#ajouter-poutine">Ajouter un poutine</a>
+    <ul id="liste-poutine">
+      <li><a href="#poutine/{Poutine.id}" class="liste-poutine-item">{Poutine.nom}</a></li>
     </ul>
   </div>
   </script>
 
-  <script type="plain/text" id="html-vue-cadeau">
+  <script type="plain/text" id="html-vue-poutine">
   <div class="page">
-    <h1>Cadeau</h1>
-    <h2 id="cadeau-nom"></h2>
-    <span>Marque</span>
-    <p id="cadeau-marque"></p>
+    <h1>Poutine</h1>
+    <h2 id="poutine-nom"></h2>
+    <span>Prix</span>
+    <p id="poutine-prix"></p>
     <span>Description</span>
-    <p id="cadeau-description"></p>
+    <p id="poutine-description"></p>
     <a href="#" class="action">Revenir &agrave; la liste</a>
   </div>
   </script>
 
-  <script type="plain/text" id="html-vue-ajouter-cadeau">
+  <script type="plain/text" id="html-vue-ajouter-poutine">
   <div class="page">
-    <h1>Ajouter un cadeau de Noël</h1>
+    <h1>Ajouter une poutinel</h1>
     <form id="formulaire-ajouter">
       <fieldset>
-        <legend>Identification du cadeau</legend>
+        <legend>Identification du poutine</legend>
         <div>
-          <label for="cadeau-nom">Nom</label>
-          <input type="text" id="cadeau-nom"/>
+          <label for="poutine-nom">Nom</label>
+          <input type="text" id="poutine-nom"/>
         </div>
         <div>
-          <label for="cadeau-marque">Marque</label>
-          <input type="text" id="cadeau-marque"/>
+          <label for="poutine-prix">Prix</label>
+          <input type="text" id="poutine-marque"/>
         </div>
       </fieldset>
       <fieldset>
-        <legend>D&eacute;tails sur le cadeau</legend>
+        <legend>D&eacute;tails sur le poutine</legend>
         <div>
-          <label for="cadeau-description">Description</label>
-          <textarea id="cadeau-description"></textarea>
+          <label for="poutine-description">Description</label>
+          <textarea id="poutine-description"></textarea>
         </div>
       </fieldset>
       <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>

@@ -27,17 +27,17 @@ html {
   font-size:48px;
 }
 
-#liste-cadeau {
+#liste-poutine {
   list-style-type:none;
 }
 
-.liste-cadeau-item {
+.liste-poutine-item {
   color:var(--theme-rouge);
   text-transform : capitalize;
   text-decoration:none;
 }
 
-#liste-cadeau li {
+#liste-poutine li {
   position:relative;
   display:block;
   margin-bottom:0.25rem;
@@ -48,7 +48,7 @@ html {
   box-shadow: 2px 2px var(--theme-blanc);
 }
 
-#liste-cadeau li::before {
+#liste-poutine li::before {
    content:"G";
    text-align:center;
    color:var(--theme-rouge);
@@ -118,7 +118,7 @@ textarea {
   min-height: 100vh;
   box-sizing: border-box;
 
-  background-image:url(illustration/personne-cadeau.png);
+  background-image:url(illustration/personne-poutine.png);
   background-repeat:no-repeat;
   background-size:cover;
   background-position:right bottom;

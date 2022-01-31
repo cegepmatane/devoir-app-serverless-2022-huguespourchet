@@ -1,6 +1,6 @@
-﻿class CadeauDAO{
+﻿class PoutineDAO{
   constructor(){
-    this.URL = 'http://127.0.0.1:8080/cadeau/'
+    this.URL = 'http://127.0.0.1:8080/poutine/'
   }
 
   lister(action){
@@ -9,17 +9,17 @@
       .then(data =>
         {
           console.log(data);
-          let listeCadeau = [];
+          let listePoutine = [];
           for(let position in data){
-            let cadeau = new Cadeau(data[position].nom,
+            let poutine = new Poutine(data[position].nom,
                                     data[position].marque,
                                     data[position].description,
                                     data[position].id);
 
-            console.log(cadeau);
-            listeCadeau.push(cadeau);
+            console.log(poutine);
+            listePoutine.push(poutine);
           }
-          action(listeCadeau);
+          action(listePoutine);
         });
   }
 
@@ -29,22 +29,22 @@
       .then(data =>
         {
           console.log(data);
-          let cadeau = new Cadeau(data.nom,
+          let poutine = new Poutine(data.nom,
                                   data.marque,
                                   data.description,
                                   data.id);
-          action(cadeau);
+          action(poutine);
         });
   }
 
-  ajouter(cadeau, action){
+  ajouter(poutine, action){
     fetch(this.URL + 'ajouter.php',
       {
         method: 'POST',
         headers: {
           'Content-Type':'application/x-www-form-urlencoded'
         },
-        body: JSON.stringify(cadeau),
+        body: JSON.stringify(poutine),
       })
       .then(response => response.text())
       .then(data =>

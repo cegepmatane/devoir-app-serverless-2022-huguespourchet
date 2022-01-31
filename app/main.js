@@ -11,7 +11,7 @@ function createWindow () {
       show: false,
       // Icône dans barre de titre et barre de tâche
       // https://stackoverflow.com/a/65352577
-      icon: __dirname + '/decoration/illustration/logo-cadeau.png',
+      icon: __dirname + '/decoration/illustration/logo-poutine.png',
       webPreferences: { /*
       preload: path.join(__dirname, 'preload.js')
       */
