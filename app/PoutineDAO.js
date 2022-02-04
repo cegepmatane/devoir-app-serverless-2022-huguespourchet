@@ -12,7 +12,9 @@
           let listePoutine = [];
           for(let position in data){
             let poutine = new Poutine(data[position].nom,
-                                    data[position].marque,
+                                    data[position].ingredients,
+                                    data[position].prix,
+                                    data[position].tailles,
                                     data[position].description,
                                     data[position].id);
 
@@ -30,7 +32,9 @@
         {
           console.log(data);
           let poutine = new Poutine(data.nom,
-                                  data.marque,
+                                  data.ingredients,
+                                  data.prix,
+                                  data.tailles,
                                   data.description,
                                   data.id);
           action(poutine);
