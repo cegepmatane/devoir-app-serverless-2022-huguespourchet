@@ -13,7 +13,7 @@
     document.getElementById("poutine-nom").innerHTML = this.poutine.nom;
     document.getElementById("poutine-ingredients").innerHTML = this.poutine.ingredients;
     document.getElementById("poutine-prix").innerHTML = this.poutine.prix;
-    document.getElementById("poutine-taille").innerHTML = this.poutine.taille;
+    document.getElementById("poutine-tailles").innerHTML = this.poutine.tailles;
     document.getElementById("poutine-description").innerHTML = this.poutine.description;
   }
 

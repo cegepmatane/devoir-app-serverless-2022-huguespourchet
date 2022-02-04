@@ -22,7 +22,7 @@
   }
 
   chercher(id, action){
-    fetch("https://2puqf5vbl9.execute-api.us-east-1.amazonaws.com/default/chercher-par-id", {mode:'cors'})
+    fetch("https://2puqf5vbl9.execute-api.us-east-1.amazonaws.com/default/chercher-par-id"+ "?id="+id, {mode:'cors'})
       .then(response => response.json())
       .then(data =>
         {
