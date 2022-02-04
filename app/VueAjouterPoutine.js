@@ -17,10 +17,12 @@
     evenement.preventDefault();
 
     let nom = document.getElementById("poutine-nom").value;
-    let marque = document.getElementById("poutine-marque").value;
+    let ingredients = document.getElementById("poutine-ingredients").value;
+    let prix = document.getElementById("poutine-prix").value;
+    let tailles = document.getElementById("poutine-tailles").value;
     let description = document.getElementById("poutine-description").value;
 
-    this.ajouterPoutine(new Poutine(nom, marque, description, null));
+    this.ajouterPoutine(new Poutine(nom, ingredients, prix, tailles, description, null));
 
   }
 

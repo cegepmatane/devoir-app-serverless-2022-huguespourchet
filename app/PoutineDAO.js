@@ -1,10 +1,6 @@
 ﻿class PoutineDAO{
-  constructor(){
-    this.URL = 'http://127.0.0.1:8080/poutine/'
-  }
-
   lister(action){
-    fetch(this.URL + 'lister.php')
+    fetch("https://uurj7mqprd.execute-api.us-east-1.amazonaws.com/default/lister", {mode:'cors'})
       .then(response => response.json())
       .then(data =>
         {
@@ -26,7 +22,7 @@
   }
 
   chercher(id, action){
-    fetch(this.URL + 'chercher-par-id.php' + '?id=' + id)
+    fetch("https://2puqf5vbl9.execute-api.us-east-1.amazonaws.com/default/chercher-par-id", {mode:'cors'})
       .then(response => response.json())
       .then(data =>
         {
@@ -42,13 +38,14 @@
   }
 
   ajouter(poutine, action){
-    fetch(this.URL + 'ajouter.php',
+    fetch("https://wnpx1k9xo4.execute-api.us-east-1.amazonaws.com/default/ajouter",
       {
         method: 'POST',
         headers: {
           'Content-Type':'application/x-www-form-urlencoded'
         },
-        body: JSON.stringify(poutine),
+        body: "poutinejson="+JSON.stringify(poutine),
+        mode: 'cors'
       })
       .then(response => response.text())
       .then(data =>
