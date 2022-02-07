@@ -1,29 +1,23 @@
 ﻿@import "normalize.css" ;
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
 
-@font-face {
-  font-family: 'Cream Cake';
-  src: url('font/cream_cake/Cream Cake.ttf')  format('truetype');
-}
 
-@font-face {
-  font-family: 'Hello Christmas Icon';
-  src: url('font/hello_christmas_icons/Hello-Christmas-Icon-trial.ttf')  format('truetype');
-}
 
 :root {
   --theme-rouge: #fd341f;
   --theme-blanc-transparent: rgba(255,255,255,0.3);
   --theme-bleu-pale: rgba(151,219,246,1);
-  --theme-bleu-fonce: rgba(63,155,191,1);
-  --theme-vert: #408450;
-  --theme-blanc: white;
+  --theme-bg-gris: rgb(77, 95, 102);
+  --theme-blanc-casse: #dbf2f3;
+  --ombre: #694e3f;
   --theme-noir: black;
+  --font-family: 'Teko', sans-serif;
 
   --theme-bordure-rondeur: 0.5rem;
 }
 
 html {
-  font-family:'Cream Cake', sans-serif;
+  font-family:var(--font-family);
   font-size:48px;
 }
 
@@ -105,7 +99,7 @@ textarea {
     background-color:var(--theme-bleu-fonce);
   }
   100% {
-    background-color:var(--theme-bleu-pale);
+    background-color:var(--theme-bg-gris);
   }
 }
 
@@ -113,7 +107,7 @@ textarea {
 
 .page {
   position:relative;
-  background-color:var(--theme-bleu-pale);
+  background-color:var(--theme-bg-gris);
   padding:5%;
   min-height: 100vh;
   box-sizing: border-box;
@@ -133,8 +127,8 @@ textarea {
   font-size:2rem;
   font-weight:normal;
   line-height:1.8rem;
-  color:var(--theme-vert);
-  text-shadow: 2px 2px var(--theme-blanc);
+  color:var(--theme-blanc-casse);
+  text-shadow: 2px 2px var(--ombre);
 
 }
 
