@@ -4,8 +4,8 @@
 
 
 :root {
-  --theme-rouge: #fd341f;
-  --theme-blanc-transparent: rgba(255,255,255,0.3);
+  --theme-rouge: #da0000;
+  --theme-blanc-transparent: rgba(114, 114, 114, 0.56);
   --theme-bleu-pale: rgba(151,219,246,1);
   --theme-bg-gris: rgb(77, 95, 102);
   --theme-blanc-casse: #dbf2f3;
@@ -105,18 +105,17 @@ textarea {
 }
 
 .page {
-  position:relative;
   background-color:var(--theme-bg-gris);
   padding:5%;
-  min-height: 100vh;
   box-sizing: border-box;
 
-  background-image:url(illustration/personne-poutine.png);
+  position:relative;
+  height:100vh;
+  background-image: url('./illustration/table.jpg');
   background-repeat:no-repeat;
   background-size:cover;
-  background-position:right bottom;
+  background-position:bottom center;
   background-attachment:fixed;
-  background-size: 40%;
   color:var(--theme-rouge);
 }
 
