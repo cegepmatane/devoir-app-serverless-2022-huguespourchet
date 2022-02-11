@@ -15,14 +15,17 @@ exports.handler = async (event, context) => {
         Bucket: bucket,
         Key: key,
     };
-    try {
-        const data = await s3.getObject(params).promise();
-        console.log("Raw text:\n"+data.Body.toString('utf-8'));
-        return data.Body.toString('utf-8');
-    } catch (err) {
-        console.log(err);
-        const message = `Error getting object ${key} from bucket ${bucket}. Make sure they exist and your bucket is in the same region as this function.`;
-        console.log(message);
-        throw new Error(message);
-    }
+    const data = await s3.getObject(params).promise();
+    console.log("Raw text:\n" + data.Body.toString('utf-8'));
+    const listePoutineJson = data.Body.toString('utf-8');
+    
+    const response = {
+        statusCode: 200,
+        headers: {
+          "Access-Control-Allow-Origin" : "*"
+        },        
+        body: listePoutineJson,
+    };
+
+    return response;
 };
