@@ -42,20 +42,11 @@ html {
   box-shadow: 2px 2px var(--theme-blanc);
 }
 
-#liste-poutine li::before {
-   content:"G";
-   text-align:center;
-   color:var(--theme-rouge);
-   font-size:1.25rem;
-   position:absolute;
-   top:0.1rem;
-   left:0.25rem;
-   height:1rem;
-   width:1rem;
-
-   font-family:'Hello Christmas Icon', sans-serif;
-
-
+#before {
+  height: 6vh;
+  position: absolute;
+  left: 1%;
+  margin-right: 5px;
 }
 
 fieldset {
@@ -76,9 +67,9 @@ textarea {
 #page-chargement-application{
   position:relative;
   height:100vh;
-  background-image:url(illustration/vanilla-js.png);
+  background-image: url('./illustration/table.jpg');
   background-repeat:no-repeat;
-  background-size:contain;
+  background-size:cover;
   background-position:bottom center;
   background-attachment:fixed;
 
@@ -88,22 +79,30 @@ textarea {
   line-height:1.8rem;
 
   padding:10%;
-  color:var(--theme-blanc);
+  color: white;
   text-shadow: 2px 2px var(--theme-noir);
-  animation: pulse 1.5s infinite;
-  animation-direction: alternate;
+  animation: fondu 10s ease-in-out both infinite;
 }
 
-@keyframes pulse {
-  0% {
-    background-color:var(--theme-bleu-fonce);
-  }
-  100% {
-    background-color:var(--theme-bg-gris);
-  }
+.tourne {
+  position: fixed;
+  top: 40%;
+  left: 45%;
+  height: 20%;
+  -webkit-animation: spin 1.5s linear infinite;
+  -moz-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
 }
 
-
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(-360deg); }
+}
+@-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(-360deg); }
+}
+@keyframes spin {
+  100% { -webkit-transform: rotate(-360deg); transform: rotate(-360deg); }
+}
 
 .page {
   position:relative;

@@ -18,7 +18,10 @@
 
 </head>
 <body>
-  <div id="page-chargement-application">Chargement de l'application liste de poutines</div>
+  <div id="page-chargement-application">Chargement de l'application liste de poutines
+    <img class="tourne" src="./decoration/illustration/poutine.png">
+  </div>
+
 
 
   <script type="plain/text" id="html-vue-liste-poutine">
@@ -26,7 +29,7 @@
     <h1>Liste de poutines</h1>
     <a class="action" href="#ajouter-poutine">Ajouter un poutine</a>
     <ul id="liste-poutine">
-      <li><a href="#poutine/{Poutine.id}" class="liste-poutine-item">{Poutine.nom}</a></li>
+      <li><img id="before" src="./decoration/illustration/couverts.png"></img><a href="#poutine/{Poutine.id}" class="liste-poutine-item">{Poutine.nom}</a></li>
     </ul>
   </div>
   </script>
