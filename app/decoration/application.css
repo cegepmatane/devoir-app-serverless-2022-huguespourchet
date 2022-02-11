@@ -108,9 +108,8 @@ textarea {
   background-color:var(--theme-bg-gris);
   padding:5%;
   box-sizing: border-box;
-
   position:relative;
-  height:100vh;
+  min-height: 100vh;
   background-image: url('./illustration/table.jpg');
   background-repeat:no-repeat;
   background-size:cover;
