@@ -24,7 +24,7 @@ function createWindow () {
   // https://stackoverflow.com/a/45906784
   win.maximize();
   win.show();
-  win.webContents.openDevTools();
+  //win.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {
