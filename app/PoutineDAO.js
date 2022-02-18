@@ -1,6 +1,6 @@
 ﻿class PoutineDAO{
   lister(action){
-    fetch("https://uurj7mqprd.execute-api.us-east-1.amazonaws.com/default/lister", {mode:'cors'})
+    fetch("https://mw2drr9rq5.execute-api.us-east-1.amazonaws.com/default/lister", {mode:'cors'})
       .then(response => response.json())
       .then(data =>
         {
@@ -22,7 +22,7 @@
   }
 
   chercher(id, action){
-    fetch("https://2puqf5vbl9.execute-api.us-east-1.amazonaws.com/default/chercher-par-id"+ "?id="+id, {mode:'cors'})
+    fetch("https://v2gs0o4p21.execute-api.us-east-1.amazonaws.com/default/chercher-par-id"+ "?id="+id, {mode:'cors'})
       .then(response => response.json())
       .then(data =>
         {
@@ -38,7 +38,7 @@
   }
 
   ajouter(poutine, action){
-    fetch("https://wnpx1k9xo4.execute-api.us-east-1.amazonaws.com/default/ajouter",
+    fetch("https://8hj2rrtfvl.execute-api.us-east-1.amazonaws.com/default/ajout",
       {
         method: 'POST',
         headers: {
