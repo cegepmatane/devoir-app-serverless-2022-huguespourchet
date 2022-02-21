@@ -1,5 +1,5 @@
 ﻿class Application {
-  constructor(window, vueListePoutine, vuePoutine, vueAjouterPoutine, poutineDAO){
+  constructor(window, vueListePoutine, vuePoutine, vueAjouterPoutine, poutineDAO, vueAuthentification){
 
     this.window = window;
 
@@ -13,25 +13,30 @@
 
     this.poutineDAO = poutineDAO;
 
+    this.vueAuthentification = vueAuthentification;
+
     // C'est l'équivalent de function(){this.naviguer()}
     this.window.addEventListener("hashchange", () =>this.naviguer());
 
     this.naviguer();
   }
 
-  naviguer(){
+  naviguer() {
     let hash = window.location.hash;
 
-    if(!hash){
+    if (!hash) {
+      this.vueAuthentification.afficher_boutons();
 
-      this.poutineDAO.lister((listePoutine) => this.afficherNouvelleListePoutine(listePoutine));
-
-    }else if(hash.match(/^#ajouter-poutine/)){
-
+    } else if (hash.match(/^#ajouter-poutine/)) {
       this.vueAjouterPoutine.afficher();
 
-    }else{
+    }else if(hash.match(/^#lister-poutine/)) {
+      this.poutineDAO.lister((listePoutine) => this.afficherNouvelleListePoutine(listePoutine));
 
+    }else if(hash.match(/^#form-auth/)){
+      this.vueAuthentification.afficher_form();
+
+    }else{
       let navigation = hash.match(/^#poutine\/([0-9]+)/);
       let idPoutine = navigation[1];
 
@@ -61,5 +66,5 @@
   }
 }
 
-new Application(window, new VueListePoutine(), new VuePoutine(), new VueAjouterPoutine(), new PoutineDAO());
+new Application(window, new VueListePoutine(), new VuePoutine(), new VueAjouterPoutine(), new PoutineDAO(), new VueAuthentification());
 

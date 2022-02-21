@@ -9,6 +9,7 @@
   <script src="VuePoutine.js"></script>
   <script src="VueListePoutine.js"></script>
   <script src="VueAjouterPoutine.js"></script>
+  <script src="VueAuthentification.js"></script>
   <!--
   https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies
   Scripts loaded using the defer attribute will run in the order they appear
@@ -23,11 +24,30 @@
   </div>
 
 
+  <script type="text/plain" id="html-vue-authentification">
+    <a class="action" href="#form-auth">Admin</a>
+    <a class="action" href="#lister-poutine">Guest</a>
+  </script>
+
+  <script type="text/plain" id="html-vue-form-auth">
+    <form id="formulaire-auth">
+      <fieldset>
+        <legend>Connection en tant qu'administrateur</legend>
+        <div>
+          <label for="user">Utilisateur</label>
+          <input type="text" id="user"/>
+          <label for="mdp">Mot de Passe</label>
+          <input type="text" id="mdp"/>
+        </div>
+      <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>
+      </fieldset
+    <form>
+  </script>
 
   <script type="plain/text" id="html-vue-liste-poutine">
   <div class="page">
     <h1>Liste de poutines</h1>
-    <a class="action" href="#ajouter-poutine">Ajouter un poutine</a>
+    <a class="action" href="#ajouter-poutine">Ajouter une poutine</a>
     <ul id="liste-poutine">
       <li><img id="before" src="./decoration/illustration/couverts.png"></img><a href="#poutine/{Poutine.id}" class="liste-poutine-item">{Poutine.nom}</a></li>
     </ul>
@@ -46,7 +66,7 @@
     <p id="poutine-tailles"></p>
     <span>Description</span>
     <p id="poutine-description"></p>
-    <a href="#" class="action">Revenir &agrave; la liste</a>
+    <a href="#lister-poutine" class="action">Revenir &agrave; la liste</a>
   </div>
   </script>
 
@@ -82,7 +102,7 @@
       </fieldset>
       <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>
     </form>
-    <a href="#" class="action">Annuler et revenir &agrave; la liste</a>
+    <a href="#lister-poutine" class="action">Annuler et revenir &agrave; la liste</a>
   </div>
   </script>
 

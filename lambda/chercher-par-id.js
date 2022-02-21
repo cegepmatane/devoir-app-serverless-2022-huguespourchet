@@ -11,7 +11,7 @@ exports.handler = async (event) => {
     headers: {
       "Access-Control-Allow-Origin" : "*"
     }, 
-    body: 'Vous devez donner un id de cadeau'
+    body: 'Vous devez donner un id de poutine'
   };
   if (id == null) {
     return response;
