@@ -44,10 +44,19 @@
     <form>
   </script>
 
-  <script type="plain/text" id="html-vue-liste-poutine">
+  <script type="plain/text" id="html-vue-liste-poutine-admin">
   <div class="page">
     <h1>Liste de poutines</h1>
     <a class="action" href="#ajouter-poutine">Ajouter une poutine</a>
+    <ul id="liste-poutine">
+      <li><img id="before" src="./decoration/illustration/couverts.png"></img><a href="#poutine/{Poutine.id}" class="liste-poutine-item">{Poutine.nom}</a></li>
+    </ul>
+  </div>
+  </script>
+
+  <script type="plain/text" id="html-vue-liste-poutine-guest">
+  <div class="page">
+    <h1>Liste de poutines</h1>
     <ul id="liste-poutine">
       <li><img id="before" src="./decoration/illustration/couverts.png"></img><a href="#poutine/{Poutine.id}" class="liste-poutine-item">{Poutine.nom}</a></li>
     </ul>

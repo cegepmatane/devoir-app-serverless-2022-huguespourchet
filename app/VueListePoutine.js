@@ -1,11 +1,16 @@
 ﻿class VueListePoutine{
   constructor(){
-    this.html = document.getElementById("html-vue-liste-poutine").innerHTML;
+    this.display = [document.getElementById("html-vue-liste-poutine-guest").innerHTML, document.getElementById("html-vue-liste-poutine-admin").innerHTML];
+    this.html = this.display[0];
     this.listePoutineDonnee = null;
   }
 
   initialiserListePoutine(listePoutineDonnee){
     this.listePoutineDonnee = listePoutineDonnee;
+  }
+
+  change_html() {
+    this.html = this.display[1];
   }
 
   afficher(){

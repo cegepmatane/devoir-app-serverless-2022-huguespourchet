@@ -14,6 +14,7 @@
     this.poutineDAO = poutineDAO;
 
     this.vueAuthentification = vueAuthentification;
+    this.vueAuthentification.app = this;
 
     // C'est l'équivalent de function(){this.naviguer()}
     this.window.addEventListener("hashchange", () =>this.naviguer());
@@ -44,6 +45,12 @@
     }
   }
 
+  verifConnection() {
+    if (this.vueAuthentification.connect == "admin") {
+      this.vueListePoutine.change_html();
+    }
+  }
+
   afficherNouvelleListePoutine(listePoutine){
 
     console.log(listePoutine);
@@ -62,7 +69,7 @@
   }
 
   afficherListePoutine(){
-    this.window.location.hash = "#";
+    this.window.location.hash = "#lister-poutine";
   }
 }
 
