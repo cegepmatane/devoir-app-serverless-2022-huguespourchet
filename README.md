@@ -1,4 +1,4 @@
-# projet-initial
-Réalisé par Hugues Pourchet et Lucas Heidet
+# projet-maintenance
+Réalisé par Hugues Pourchet
 
 
