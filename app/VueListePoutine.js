@@ -9,8 +9,8 @@
     this.listePoutineDonnee = listePoutineDonnee;
   }
 
-  change_html() {
-    this.html = this.display[1];
+  change_html(id) {
+    this.html = this.display[id];
   }
 
   afficher(){
@@ -22,6 +22,7 @@
 
     for(var numeroPoutine in this.listePoutineDonnee){
       let listePoutineItemHTMLRemplacement = listePoutineItemHTML;
+      listePoutineItemHTMLRemplacement = listePoutineItemHTMLRemplacement.replace("{Poutine.id}",this.listePoutineDonnee[numeroPoutine].id);
       listePoutineItemHTMLRemplacement = listePoutineItemHTMLRemplacement.replace("{Poutine.id}",this.listePoutineDonnee[numeroPoutine].id);
       listePoutineItemHTMLRemplacement = listePoutineItemHTMLRemplacement.replace("{Poutine.nom}",this.listePoutineDonnee[numeroPoutine].nom);
       listePoutineHTMLRemplacement += listePoutineItemHTMLRemplacement;

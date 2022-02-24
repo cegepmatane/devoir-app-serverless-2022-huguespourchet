@@ -10,6 +10,7 @@
   <script src="VueListePoutine.js"></script>
   <script src="VueAjouterPoutine.js"></script>
   <script src="VueAuthentification.js"></script>
+  <script src="VueListeCommandes.js"></script>
   <!--
   https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies
   Scripts loaded using the defer attribute will run in the order they appear
@@ -42,25 +43,40 @@
       <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>
       </fieldset
     <form>
+    <a href="#form-boutons" class="action">Retour</a>
   </script>
 
   <script type="plain/text" id="html-vue-liste-poutine-admin">
   <div class="page">
     <h1>Liste de poutines</h1>
     <a class="action" href="#ajouter-poutine">Ajouter une poutine</a>
+    <a class="action" href="#lister-commandes">Voir les commandes</a>
     <ul id="liste-poutine">
-      <li><img id="before" src="./decoration/illustration/couverts.png"></img><a href="#poutine/{Poutine.id}" class="liste-poutine-item">{Poutine.nom}</a></li>
+      <li><img id="before" src="./decoration/illustration/couverts.png"></img><a href="#poutine/{Poutine.id}" class="liste-poutine-item">{Poutine.nom}</a> <a href="#supprimer-poutine/{Poutine.id}" class="action">Supprimer</a></li>
     </ul>
   </div>
+  <a href="#form-boutons" class="action">Retour à l'authentification</a>
   </script>
 
   <script type="plain/text" id="html-vue-liste-poutine-guest">
-  <div class="page">
+ <div class="page">
     <h1>Liste de poutines</h1>
     <ul id="liste-poutine">
-      <li><img id="before" src="./decoration/illustration/couverts.png"></img><a href="#poutine/{Poutine.id}" class="liste-poutine-item">{Poutine.nom}</a></li>
+      <li><img id="before" src="./decoration/illustration/couverts.png"></img><a href="#poutine/{Poutine.id}" class="liste-poutine-item">{Poutine.nom}</a><a href="#commander/{Poutine.id}" class="action liste-poutine-item">Commander</a></li>
     </ul>
   </div>
+  <a href="#form-boutons" class="action">Retour à l'authentification</a>
+
+  </script>
+
+  <script type="plain/text" id="html-vue-liste-commandes">
+ <div class="page">
+    <h1>Liste de commandes</h1>
+    <ul id="liste-commandes">
+      <li><img id="before" src="./decoration/illustration/couverts.png"></img><div class="liste-poutine-item ">{Poutine.nom}</div><a href="#supprimer-commande/{Poutine.id}" class="action liste-poutine-item">Supprimer</a></li>
+    </ul>
+  </div>
+  <a href="#lister-poutine" class="action">Retour aux poutines</a>
   </script>
 
   <script type="plain/text" id="html-vue-poutine">
