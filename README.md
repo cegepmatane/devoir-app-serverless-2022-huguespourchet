@@ -7,7 +7,7 @@
 <ul>
   <li>Liste des poutines</li>
   </ul>
-  ### Vue Responsable
+  <h3>Vue Responsable</h3>
   <ul>
   <li>Système d'authentification (n'est pas complètement implémenté pour permettre à l'application d'être visité) 
   <li>Liste des poutines</li>
@@ -18,7 +18,7 @@
   </ul>
   <br/>
   ## Technologies:
-  ### Electron
+  <h3>Electron</h3>
   Environnement permettant de développer une application web en Node.js
   
   ### AWS
