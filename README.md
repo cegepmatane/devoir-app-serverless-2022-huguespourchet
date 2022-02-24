@@ -17,7 +17,7 @@
   <li>Suppression des commandes faites</li>
   </ul>
   <br/>
-  ## Technologies:
+  <h2>Technologies:</h2>
   <h3>Electron</h3>
   Environnement permettant de développer une application web en Node.js
   
