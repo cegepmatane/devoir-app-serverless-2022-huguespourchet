@@ -3,7 +3,7 @@
 
 ## Fonctionalités ajoutées:
 <br/>
-### Vue Client
+<h3> Vue Client</h3>
 <ul>
   <li>Liste des poutines</li>
   </ul>
