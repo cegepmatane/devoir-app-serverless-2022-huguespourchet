@@ -61,6 +61,11 @@
       let idPoutine = hash.match(/^#supprimer-commande\/([0-9]+)/)[1];
       this.poutineDAO.supprimer_commande(idPoutine, () => this.afficherListeCommande());
 
+    }else if(hash.match(/^#liste-guest/)){
+      this.vueAuthentification.connect = "guest";
+      this.verifConnection();
+      this.afficherListePoutine();
+
     }else{
       this.vueAuthentification.afficher_boutons();
       console.log("error, returning home...");
